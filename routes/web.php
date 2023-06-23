@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\AlertHistoryController;
+use App\Http\Controllers\FormularioController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +34,4 @@ Route::get('/welcomeUsers', function () {
 });
 
 Route::get('/welcomeUsers', [AlertHistoryController::class, 'index']); 
+Route::post('/welcomeUsers', [FormularioController::class, 'enviarFormulario'])->name('enviar.formulario');
